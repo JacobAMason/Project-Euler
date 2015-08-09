@@ -45,10 +45,10 @@ def solve(largestStartingNumber):
             else:
                 thisChainLength += 1
         chainLengthsDict[startingNumber] = thisChainLength
-        if chainLengthsDict[largestStartingNumber] < chainLengthsDict[startingNumber]:
-            largestStartingNumber = startingNumber
+        if chainLengthsDict[largestChainStartingNumber] < chainLengthsDict[startingNumber]:
+            largestChainStartingNumber = startingNumber
 
-    return largestStartingNumber
+    return largestChainStartingNumber
 
 
 
@@ -64,13 +64,13 @@ if __name__ == '__main__':
           "starts with", n)
     print("Found in %d minutes and %f seconds." % (minutes, seconds))
 
-    # print()
-    # s = time.time()
-    # n = solve(1000000)
-    # e = time.time()
-    # t = e-s
-    # minutes = t // 60
-    # seconds = t % 60
-    # print("The longest chain with a starting number under 1 million "\
-    #       "starts with", n)
-    # print("Found in %d minutes and %f seconds." % (minutes, seconds))
+    print()
+    s = time.time()
+    n = solve(1000000)
+    e = time.time()
+    t = e-s
+    minutes = t // 60
+    seconds = t % 60
+    print("The longest chain with a starting number under 1 million "\
+          "starts with", n)
+    print("Found in %d minutes and %f seconds." % (minutes, seconds))
